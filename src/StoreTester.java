@@ -10,7 +10,7 @@ public class StoreTester {
         Store store = new Store();
         Book book = new Book("x","x","x",1,1,"x","x","x","x","x");
         Store.addBook(book);
-        assertTrue(true);
+        assertTrue(store.getItems("Book").contains(book));
     }
     @Test
     public void addPhoneTest(){
@@ -19,7 +19,7 @@ public class StoreTester {
         Store.addBook(book);
         Phone phone = new Phone("x","x","x",1,1,"x","x","x","x",1);
         Store.addPhone(phone);
-        assertTrue(true);
+        assertTrue(store.getItems("Phone").contains(phone));
     }
     @Test
 
